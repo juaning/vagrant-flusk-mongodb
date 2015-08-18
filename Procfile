@@ -1,1 +1,1 @@
-web: gunicorn flask_rest_service:app $PORT
+web: gunicorn $PORT flask_rest_service:app
