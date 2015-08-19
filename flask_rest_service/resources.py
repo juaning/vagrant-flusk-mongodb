@@ -16,7 +16,6 @@ class ReadingList(restful.Resource):
 
     def post(self):
         args = self.parser.parse_args()
-        print (args)
         if not args['reading']:
             abort(400)
 
