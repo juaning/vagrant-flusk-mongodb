@@ -15,6 +15,7 @@ class ReadingList(restful.Resource):
         return  [x for x in mongo.db.readings.find()]
 
     def post(self):
+        app.logger.info('posting')
         args = self.parser.parse_args()
         if not args['reading']:
             abort(400)
