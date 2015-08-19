@@ -1,1 +1,1 @@
-web: gunicorn flask_rest_service:app --log-file - -b 0.0.0.0:5000
+web: gunicorn flask_rest_service:app --log-file - -b 0.0.0.0:$PORT
