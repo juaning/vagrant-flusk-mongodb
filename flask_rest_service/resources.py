@@ -17,7 +17,7 @@ class ReadingList(restful.Resource):
     def post(self):
         args = self.parser.parse_args()
         if not args['reading']:
-            abort(400)
+            abort(403)
 
         jo = json.loads(args['reading'])
         reading_id =  mongo.db.readings.insert(jo)
